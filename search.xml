@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Linux下安装配置]]></title>
+    <url>%2F2018%2F10%2F27%2Ftest2%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>MongoDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux下安]]></title>
+    <url>%2F2018%2F10%2F27%2Ftest1%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MongoDB利用shell进行导入导出操作]]></title>
+    <url>%2F2018%2F10%2F27%2Flinux%20mongodb%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E5%90%AF%E5%8A%A8%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[一.导入工具mongoimport参数说明： -h:指明数据库宿主机的IP -u:指明数据库的用户名 -p:指明数据库的密码 -d:指明数据库的名字 -c:指明collection的名字 -f:指明要导入那些列 –type:导入文件类型 –file: 导入文件路径 -headerline:指明第一行是列名，不需要导入 Example：1monogoimoport -h 112.35.87.36 -d cmcc -u cmcc -p cmcc1234 -c cmcc --type json --file G:\test.json]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MongoDB</tag>
+      </tags>
+  </entry>
+</search>
