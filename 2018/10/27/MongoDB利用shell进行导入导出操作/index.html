@@ -83,11 +83,11 @@
 <meta name="keywords" content="MongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB利用shell进行导入导出操作">
-<meta property="og:url" content="https://saberlu.coding.me/2018/10/27/linux mongodb安装和配置启动图文详解/index.html">
+<meta property="og:url" content="https://saberlu.coding.me/2018/10/27/MongoDB利用shell进行导入导出操作/index.html">
 <meta property="og:site_name" content="sakura的小站">
 <meta property="og:description" content="一.导入工具mongoimport参数说明：  -h:指明数据库宿主机的IP -u:指明数据库的用户名 -p:指明数据库的密码 -d:指明数据库的名字 -c:指明collection的名字 -f:指明要导入那些列 –type:导入文件类型 –file: 导入文件路径 -headerline:指明第一行是列名，不需要导入  Example：1monogoimoport -h 112.35.87.36">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-28T05:37:40.303Z">
+<meta property="og:updated_time" content="2018-10-28T06:44:56.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB利用shell进行导入导出操作">
 <meta name="twitter:description" content="一.导入工具mongoimport参数说明：  -h:指明数据库宿主机的IP -u:指明数据库的用户名 -p:指明数据库的密码 -d:指明数据库的名字 -c:指明collection的名字 -f:指明要导入那些列 –type:导入文件类型 –file: 导入文件路径 -headerline:指明第一行是列名，不需要导入  Example：1monogoimoport -h 112.35.87.36">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="https://saberlu.coding.me/2018/10/27/linux mongodb安装和配置启动图文详解/">
+  <link rel="canonical" href="https://saberlu.coding.me/2018/10/27/MongoDB利用shell进行导入导出操作/">
 
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://saberlu.coding.me/2018/10/27/linux mongodb安装和配置启动图文详解/">
+    <link itemprop="mainEntityOfPage" href="https://saberlu.coding.me/2018/10/27/MongoDB利用shell进行导入导出操作/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路明非">
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  120
+                  231
                 </span>
               
 
@@ -427,8 +427,21 @@
 <li>–file: 导入文件路径</li>
 <li>-headerline:指明第一行是列名，不需要导入</li>
 </ul>
-<p><font size="4"><strong>Example：</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">monogoimoport -h 112.35.87.36 -d cmcc -u cmcc -p cmcc1234 -c cmcc --type json --file G:\test.json</span><br></pre></td></tr></table></figure></p>
-<h3 id="二-导出工具mongoexport"><a href="#二-导出工具mongoexport" class="headerlink" title="二.导出工具mongoexport"></a>二.导出工具mongoexport</h3>
+<p><font size="4"><strong>Example：</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">monogoimoport -h 112.35.87.36 -d test -u test -p test1234 -c students --type json --file G:\test.json</span><br></pre></td></tr></table></figure></p>
+<h3 id="二-导出工具mongoexport"><a href="#二-导出工具mongoexport" class="headerlink" title="二.导出工具mongoexport"></a>二.导出工具mongoexport</h3><p><font size="4">参数说明：</font></p>
+<ul>
+<li>-h:指明数据库宿主机的IP</li>
+<li>-u:指明数据库的用户名</li>
+<li>-p:指明数据库的密码</li>
+<li>-d:指明数据库的名字</li>
+<li>-c:指明collection的名字</li>
+<li>-f:指明要导出那些列</li>
+<li>-o:指明到要导出的文件名</li>
+<li>-q:指明导出数据的过滤条件</li>
+<li>-csv：指明要导出为csv格式</li>
+</ul>
+<p><font size="4"><strong>Example：</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">monogoexport -h 112.35.87.36 -d test -u test -p test1234 -c students -o G:\test.json</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
