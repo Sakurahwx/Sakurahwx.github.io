@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Centos7下安装配置vsftpd服务器]]></title>
-    <url>%2F2018%2F10%2F27%2FCentos7%E9%85%8D%E7%BD%AEftp%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Centos7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[ArcGIS API for Javascript配置proxy]]></title>
     <url>%2F2018%2F10%2F27%2Farcgis%20api%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%2F</url>
     <content type="text"><![CDATA[1.为什么要使用proxy未设置代理时arcigs server默认以get的方式发送请求，当请求跨域访问或者URL长度超过限制时(最大为2048个字符)，就需要一个代理文件proxy来转发相应的请求。 2.下载proxy文件下载地址目录中包含三个子目录，分别对应不同的Web服务器类型： DotNet：IIS服务器 Java：Apache Tomcat服务器 PHP：Apache服务器 不同版本的ArcGIS Server对应不同版本的proxy文件，该页面中的V1.1.0版本支持10.2和10.3版本的，V1.1.2支持10.4版本及以上 3.配置与部署&nbsp;3.1修改文件(此处以V1.1.2版本为例)打开“WEB-INF/classes”菜单目录下的“proxy.config”文件，将“serverUrl”标签中的URL改为自己需要调用的ArcGIS Server地址，如下图所示： V1.1.0版本：该版本文件下载下来后除了需要修改proxy.config文件，还需要修改proxy.jsp内容。全局搜索“&lt;&gt;”将对应的类型写入，例如：文件中有HashMap&lt;&gt;未写类型，可能就需要修改为HashMap&lt;String,String&gt; &nbsp;3.2部署将整个java文件夹拷贝至Tomcat服务器下webapp夹中并启动Tomcat服务器即可 &nbsp;3.3测试打开浏览器，访问1192.168.1.231:8080/Java/proxy.jsp?ping 会看到12345&#123; &quot;Proxy Version&quot;: &quot;1.1.2&quot;, &quot;Configuration File&quot;: &quot;OK&quot;, &quot;Log File&quot;: &quot;OK&quot;&#125; 再访问1192.168.1.231:8080/Java/proxy.jsp?http://192.168.1.305:6080/arcgis/rest/services?f=pjson 如果看到指定ArcGIS Server目录下的Json数据,则说明代理配置成功 4.在项目中使用加入以下代码即可： 123require([&quot;esri/config&quot;], function(esriConfig) &#123; esriConfig.request.proxyUrl = &quot;http://192.168.1.231/Java/proxy.jsp&quot;;&#125;);]]></content>
